@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/bloc/pages/form_validation_page.dart';
+import 'package:flutter_app/main_page.dart';
+import 'package:flutter_app/theme/app_theme_page.dart';
+import 'package:flutter_app/theme/theme/appbars_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: FormValidationPage(),
+      debugShowCheckedModeBanner: false,
+      // home: MainPage(),
+      home: AppThemePage(),
+      // home: AppbarPage(),
     );
   }
 }
