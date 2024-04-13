@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/bloc_and_generic/counter_page.dart';
+import 'package:flutter_app/bloc_and_generic/webivew.dart';
 import 'package:flutter_app/bloc_form/pages/form_validation_page.dart';
 import 'package:flutter_app/theme/app_theme_page.dart';
 
@@ -23,12 +25,22 @@ class MainPage extends StatelessWidget {
               builder: (context) => const AppThemePage(),
             )),
           ),
+          ListTile(
+            title: const Text('Bloc and Generic'),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => CounterPage(),
+            )),
+          ),
+          ListTile(
+            title: const Text('My Profile'),
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => WebViewPage(
+                url: 'https://medium.com/@azharbinanwar',
+              ),
+            )),
+          ),
         ],
       ),
     );
   }
-}
-
-widget(){
-
 }

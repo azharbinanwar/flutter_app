@@ -11,10 +11,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_bloc: ^8.1.2
+  flutter_bloc: ^8.1.5
+  
+  # webview
+  webview_flutter: ^4.7.0
 
-  cupertino_icons: ^1.0.2
 
+  cupertino_icons: ^1.0.6
 dev_dependencies:
   flutter_test:
     sdk: flutter

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/bloc_and_generic/helper.dart';
 import 'package:flutter_app/main_page.dart';
-import 'package:flutter_app/theme/app_theme_page.dart';
-import 'package:flutter_app/theme/theme/appbars_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +12,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false,
-      // home: MainPage(),
-      home: AppThemePage(),
-      // home: AppbarPage(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(create: (context) => Handler<int>(0)),
+        BlocProvider(create: (context) => Handler<num>(0)),
+      ],
+      child: const MaterialApp(
+        title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
+        // home: MainPage(),
+        home: MainPage(),
+        // home: AppbarPage(),
+      ),
     );
   }
 }
