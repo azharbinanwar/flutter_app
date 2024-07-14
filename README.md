@@ -6,3 +6,6 @@ A new Flutter project.
  - You can learn how to validate a update with bloc?
  - How we can use selector in form validation?
  - How `copyWith` and mixin can used?
+
+
+## Carousel
